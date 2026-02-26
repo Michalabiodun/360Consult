@@ -32,7 +32,7 @@ function Navbar() {
   }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-50 bg-soft-white/95 backdrop-blur border-b border-slate-200">
+    <header className="sticky top-0 z-50 bg-soft-white md:bg-soft-white/95 backdrop-blur-none md:backdrop-blur border-b border-slate-200">
       <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 z-50">
           <div className="h-8 w-8 rounded-full border border-gold flex items-center justify-center text-[10px] font-semibold text-navy">
@@ -102,7 +102,7 @@ function Navbar() {
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="z-50 p-2 text-navy focus:outline-none"
+            className="z-50 p-2 text-navy focus:outline-none bg-white rounded-lg shadow-sm border border-slate-200"
             aria-label="Toggle Menu"
           >
             <span className="material-symbols-outlined text-3xl">
