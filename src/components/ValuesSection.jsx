@@ -2,7 +2,13 @@ import { Shield, Award, Heart, TrendingUp, CheckSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const ValueItem = ({ icon: Icon, title, description }) => (
-    <div className="flex flex-col items-center text-center space-y-4">
+    <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col items-center text-center space-y-4"
+    >
         <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
             <Icon className="w-6 h-6 text-gold" />
         </div>
@@ -10,7 +16,7 @@ const ValueItem = ({ icon: Icon, title, description }) => (
             <h3 className="text-sm font-semibold text-soft-white">{title}</h3>
             <p className="text-[10px] text-slate-500 leading-tight max-w-[120px]">{description}</p>
         </div>
-    </div>
+    </motion.div>
 );
 
 const ValuesSection = () => {

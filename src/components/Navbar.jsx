@@ -6,7 +6,6 @@ const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/approach', label: 'Our Approach' },
   { to: '/services', label: 'Services' },
-  { to: '/diagnostic', label: 'Quick Diagnostic' },
   { to: '/values', label: 'Values' },
 ];
 
@@ -76,12 +75,6 @@ function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <Link
-            to="/diagnostic"
-            className="px-4 py-2 rounded-full border border-gold text-xs font-semibold text-navy hover:bg-gold/10 transition-colors"
-          >
-            Start Your Journey
-          </Link>
-          <Link
             to="/services"
             className="px-4 py-2 rounded-full bg-navy text-xs font-semibold text-soft-white shadow-md hover:bg-navy/90 transition-colors"
           >
@@ -143,12 +136,6 @@ function Navbar() {
             </nav>
 
             <div className="mt-auto flex flex-col gap-4 pb-10">
-              <Link
-                to="/diagnostic"
-                className="w-full py-4 text-center rounded-xl border border-gold text-sm font-semibold text-navy bg-white shadow-sm"
-              >
-                Start Your Journey
-              </Link>
               <Link
                 to="/services"
                 className="w-full py-4 text-center rounded-xl bg-navy text-sm font-semibold text-soft-white shadow-lg"

@@ -1,22 +1,31 @@
 import { Eye, TrendingUp, Users, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { GlowCard } from './ui/spotlight-card';
 
 const StatCard = ({ icon: Icon, stat, label, className = "" }) => (
-    <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className={`bg-[#0A1A2F] border border-white/5 p-6 rounded-2xl flex flex-col items-center justify-center text-center space-y-2 ${className}`}
+    <GlowCard
+        customSize={true}
+        glowColor="orange"
+        className="rounded-2xl h-full"
     >
-        {Icon && <Icon className="w-6 h-6 text-gold mb-2" />}
-        <h3 className="text-2xl font-bold text-soft-white">{stat}</h3>
-        <p className="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">{label}</p>
-    </motion.div>
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -6 }}
+            whileTap={{ scale: 0.97 }}
+            className="flex flex-col items-center justify-center text-center space-y-2 h-full w-full p-6"
+        >
+            {Icon && <Icon className="w-6 h-6 text-gold mb-2" />}
+            <h3 className="text-2xl font-bold text-soft-white">{stat}</h3>
+            <p className="text-[10px] uppercase tracking-widest text-slate-300 font-semibold">{label}</p>
+        </motion.div>
+    </GlowCard>
 );
 
 const StatSection = () => {
     return (
-        <section className="bg-[#051124] py-20">
+        <section className="bg-gray-800 border-t-2 py-10">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">

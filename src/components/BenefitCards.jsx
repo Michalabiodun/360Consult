@@ -1,25 +1,36 @@
 import { motion } from 'framer-motion';
+import { GlowCard } from './ui/spotlight-card';
 
 const BenefitCard = ({ title, description, delay = 0 }) => (
-    <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay }}
-        className="bg-white p-10 rounded-3xl h-full flex flex-col space-y-4"
+    <GlowCard
+        customSize={true}
+        glowColor="orange"
+        className="rounded-2xl h-full"
     >
-        <h3 className="text-2xl font-bold text-navy leading-tight">
-            {title}
-        </h3>
-        <p className="text-slate-500 text-sm leading-relaxed">
-            {description}
-        </p>
-    </motion.div>
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay }}
+            whileHover={{ y: -6 }}
+            whileTap={{ scale: 0.97 }}
+            className="flex flex-col justify-between h-full w-full p-6"
+        >
+            <div className="space-y-3">
+                <h3 className="text-2xl font-bold text-white leading-tight">
+                    {title}
+                </h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                    {description}
+                </p>
+            </div>
+        </motion.div>
+    </GlowCard>
 );
 
 const BenefitCards = () => {
     return (
-        <section className="bg-[#051124] py-20">
+        <section className="bg-gray-800 py-20">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <BenefitCard

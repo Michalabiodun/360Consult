@@ -15,7 +15,7 @@ const ExpertiseCard = ({ icon: Icon, title }) => (
 
 const ExpertiseSection = () => {
     return (
-        <section className="bg-[#051124] py-20 border-t border-white/5">
+        <section className="bg-gray-800 py-20 border-t-2 border-white/10">
             <div className="max-w-6xl mx-auto px-4 text-center">
                 <h2 className="text-3xl font-bold text-soft-white mb-4">
                     Expertise Across Every Dimension

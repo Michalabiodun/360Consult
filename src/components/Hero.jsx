@@ -25,10 +25,10 @@ function Hero() {
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
-              to="/diagnostic"
+              to="/services"
               className="px-5 py-2.5 rounded-full bg-gold text-navy text-xs font-semibold shadow-md hover:bg-gold-light transition-colors"
             >
-              Start Your Journey
+              Book Consultation
             </Link>
             <Link
               to="/services"

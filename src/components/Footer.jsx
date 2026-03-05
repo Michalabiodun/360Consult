@@ -28,7 +28,6 @@ const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-gold/80">Quick Links</h3>
             <ul className="space-y-3 text-xs text-slate-400">
-              <li><Link to="/diagnostic" className="hover:text-gold transition-colors">Business Quiz</Link></li>
               <li><Link to="/approach" className="hover:text-gold transition-colors">Our Methodology</Link></li>
               <li><Link to="/book/mentorship" className="hover:text-gold transition-colors">Book with us</Link></li>
               <li><Link to="/" className="hover:text-gold transition-colors">Claim video</Link></li>
@@ -41,11 +40,11 @@ const Footer = () => {
             <ul className="space-y-3 text-xs text-slate-400">
               <li className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-gold" />
-                <span>info@360consult.pro</span>
+                <span>360consultlimited@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-gold" />
-                <span>+1-000-000-000-00</span>
+                <span>+234 9125976855</span>
               </li>
               <li className="flex items-center gap-2">
                 <Globe className="w-3.5 h-3.5 text-gold" />
